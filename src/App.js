@@ -1,26 +1,30 @@
 import React from 'react';
-import logo from './logo.svg';
 import './App.css';
+import store from './store'
+import { Provider } from 'react-redux'
+import { Route } from 'react-router-dom'
+import EventsListContainer from './components/EventsList/EventsListContainer';
+import TicketsListContainer from './components/TicketsList/TicketsListContainer'
+import LoginFormContainer from './components/LoginForm/LoginFormContainer'
+import EditTicketFormContainer from './components/EditTicketForm/EditTicketFormContainer'
+import SignUpFormContainer from './components/SignUpForm/SignUpFormContainer'
+import TicketDetailsContainer from './components/TicketDetails/TicketDetailsContainer'
 
-function App() {
-  return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
-  );
+class App extends React.Component {
+  render() {
+    return (
+      <Provider store={store}>
+        <div>
+          <Route path="/" exact component={LoginFormContainer} />
+          <Route path="/sign-up" exact component={SignUpFormContainer}/>
+          <Route path="/events" exact component={EventsListContainer}/>
+          <Route path="/events/:eventId" exact component={TicketsListContainer}/>
+          <Route path="/edit-ticket/:ticketId" exact component={EditTicketFormContainer}/>
+          <Route path="/ticket/:ticketId" exact component={TicketDetailsContainer}/>
+        </div>
+      </Provider>
+    );
+  }
 }
 
-export default App;
+export default App

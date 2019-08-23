@@ -31,3 +31,78 @@
     transform: rotate(360deg);
   }
 }
+
+.risk-high {
+  background-color: red;
+  max-width: 50%;
+}
+
+.risk-medium {
+  background-color: yellow;
+  max-width: 50%;
+}
+
+.risk-low {
+  background-color: green;
+  max-width: 50%;
+}
+
+form {
+  flex: 1;
+  display: flex;
+  border: 1px solid #ccc;
+  justify-content: space-between;
+  padding: 20px;
+  box-shadow: 1px 1px 5px rgba(0, 0, 0, 0.2);
+}
+
+label {
+  flex: 1;
+}
+
+input[type=text] {
+  max-width: 300px;
+  margin-right: 20px;
+}
+
+input[type=submit] {
+  align-self: flex-end;
+  text-transform: uppercase;
+  cursor: pointer;
+  margin-left: 10px;
+}
+
+body {
+  background-color: #3277ee;
+  color: #fff;
+  margin: 30px auto;
+  display: flex;
+}
+
+ul {
+  width: 500px;
+  margin: 30px auto;
+  padding: 0;
+  box-shadow: 1px 1px 5px rgba(0, 0, 0, 0.2);
+}
+
+h1 {
+  text-align: center;
+}
+
+p {
+  flex: 1;
+  padding: 12px 24px;
+  font-size: 150%;
+}
+
+button {
+  background-color: white;
+  color: black;
+  border: 2px solid #555555;
+}
+
+button:hover {
+  background-color: #555555;
+  color: white;
+}
