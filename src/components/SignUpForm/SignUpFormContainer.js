@@ -4,6 +4,7 @@ import { loginUser } from '../../actions/user'
 import { Link } from 'react-router-dom'
 import request from 'superagent'
 import SignUpForm from './SignUpForm'
+import baseUrl from '../../constants'
 
 class LoginFormContainer extends React.Component {
   state = { name: '', email: '', password: '', userCreated: false, err: '' }
@@ -14,7 +15,7 @@ class LoginFormContainer extends React.Component {
     this.setState({err: ''})
 
     request
-      .post('http://localhost:4000/user')
+      .post(`${baseUrl}/user`)
       .send({
         name: this.state.name,
         email: this.state.email,

@@ -6,8 +6,6 @@ import AddTicketFormContainer from '../AddTicketForm/AddTicketFormContainer'
 import { Link } from 'react-router-dom'
 
 class TicketsListContainer extends React.Component {
-  baseUrl = 'http://localhost:4000'
-
   state = { noOfTickets: 0 }
 
   componentDidMount() {
