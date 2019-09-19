@@ -15,6 +15,7 @@ class App extends React.Component {
     return (
       <Provider store={store}>
         <div>
+          <h1>TicketSwap App</h1>
           <Route path="/" exact component={LoginFormContainer} />
           <Route path="/sign-up" exact component={SignUpFormContainer}/>
           <Route path="/events" exact component={EventsListContainer}/>

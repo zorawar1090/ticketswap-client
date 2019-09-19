@@ -1,31 +1,54 @@
 import React from 'react'
 import Button from '@material-ui/core/Button'
 
-export default function(props){
-  const { onChangeName, onChangeLogo, onChangeStartDate, onChangeEndDate, onChangeDescription, onSubmit, value} = props
+export default function (props) {
+  const { onChangeName, onChangeLogo, onChangeStartDate, onChangeEndDate, onChangeDescription, onSubmit, value } = props
 
-  return(
+  return (
     <div>
-    <h3>Create a new event</h3>
-        <form onSubmit={onSubmit}>
+      <h3>Create a new event</h3>
+      <form onSubmit={onSubmit}>
 
-          <label>Name:</label>
-          <input type='text' value={value} onChange={onChangeName} required/>
+        <p>
+          <label for="name">
+            <span>Name:</span>
+          </label>
+          <input type='text' value={value} onChange={onChangeName} required />
+        </p>
 
-          <label>Image/Logo:</label>
+        <p>
+          <label for="logo">
+            <span>Image/Logo:</span>
+          </label>
           <input type='text' value={value} onChange={onChangeLogo} />
+        </p>
 
-          <label>StartDate:</label>
-          <input type='date' value={value} onChange={onChangeStartDate} required/>
+        <p>
+          <label for="start-date">
+            <span>Start Date:</span>
+          </label>
+          <input type='date' value={value} onChange={onChangeStartDate} required />
+        </p>
 
-          <label>EndDate:</label>
-          <input type='date' value={value} onChange={onChangeEndDate} required/>
+        <p>
+          <label for="end-date">
+            <span>End Date:</span>
+          </label>
+          <input type='date' value={value} onChange={onChangeEndDate} required />
+        </p>
 
-          <label>Description:</label>
-          <input type='text' value={value} onChange={onChangeDescription} required/>
-          
+        <p>
+          <label for="description">
+            <span>Description:</span>
+          </label>
+          <input type='text' value={value} onChange={onChangeDescription} required />
+        </p>
+
+        <p>
           <Button variant="contained" type='submit'>Create Event</Button>
-        </form>
+        </p>
+
+      </form>
     </div>
   )
 }

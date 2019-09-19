@@ -1,4 +1,5 @@
 import React from 'react'
+import Button from '@material-ui/core/Button'
 
 export default function (props) {
   const { onChangeImage, onChangePrice, onChangeDescription, onSubmit, value } = props
@@ -9,15 +10,15 @@ export default function (props) {
       <form onSubmit={onSubmit}>
 
         <label>Image:</label>
-        <input type='text' value={value} onChange={onChangeImage} />
+        <input type="text" value={value} onChange={onChangeImage} />
 
         <label>Price:</label>
-        <input type='number' value={value} onChange={onChangePrice} />
+        <input type="number" value={value} onChange={onChangePrice} />
 
         <label>Description:</label>
-        <input type='text' value={value} onChange={onChangeDescription} />
+        <input type="text" value={value} onChange={onChangeDescription} />
 
-        <button type='submit'>Edit</button>
+        <Button variant="contained" type="submit">Edit</Button>
       </form>
     </div>
   )

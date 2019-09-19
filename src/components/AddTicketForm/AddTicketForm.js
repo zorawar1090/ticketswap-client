@@ -8,16 +8,29 @@ export default function (props) {
     <div>
       <h3>Create a new ticket</h3>
       <form onSubmit={onSubmit}>
-        <label>Image:</label>
-        <input type="text" value={value} onChange={onChangeImage} />
 
-        <label>Price:</label>
-        <input type="number" value={value} onChange={onChangePrice} required/>
+        <p>
+          <label for="image">
+            <span>Image:</span>
+          </label>
+          <input type="text" value={value} onChange={onChangeImage} />
+        </p>
 
-        <label>Description:</label>
-        <input type="text" value={value} onChange={onChangeDescription} required/>
+        <p>
+          <label for="price">
+            <span>Price:</span>
+          </label>
+          <input type="number" value={value} onChange={onChangePrice} required />
+        </p>
 
-        <Button variant="contained" type="submit">Create Ticket</Button>
+        <p>
+          <label for="description">
+            <span>Description:</span>
+          </label>
+          <input type="text" value={value} onChange={onChangeDescription} required />
+        </p>
+
+        <p><Button variant="contained" type="submit">Create Ticket</Button></p>
       </form>
     </div>
   )
